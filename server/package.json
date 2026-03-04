@@ -1,21 +1,16 @@
 {
-  "name": "web-socket",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angelarivass/Web-socket.git"
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/angelarivass/Web-socket/issues"
-  },
-  "homepage": "https://github.com/angelarivass/Web-socket#readme"
+  "dependencies": {
+    "socket.io": "^3.0.4",
+    "ws": "^7.4.1"
+  }
 }
