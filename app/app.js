@@ -4,7 +4,7 @@ socket.on('message', data => {
 
     const el = document.createElement('li');
     el.innerHTML = `<strong>${data.nickname}:</strong> ${data.text}`;
-    document.querySelector('ul').appendChild(el);
+    document.querySelector('#messages').appendChild(el);
 
 });
 
