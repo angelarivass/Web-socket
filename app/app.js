@@ -1,16 +1,21 @@
-const socket = io('ws://localhost:8080');
+const socket = io('http://localhost:8080');
 
-socket.on('message', text => {
+socket.on('message', data => {
 
     const el = document.createElement('li');
-    el.innerHTML = text;
-    document.querySelector('ul').appendChild(el)
+    el.innerHTML = `<strong>${data.nickname}:</strong> ${data.text}`;
+    document.querySelector('ul').appendChild(el);
 
 });
 
 document.querySelector('button').onclick = () => {
 
-    const text = document.querySelector('input').value;
-    socket.emit('message', text)
+    const nickname = document.querySelector('#nickname').value;
+    const text = document.querySelector('#message').value;
 
-}
+    socket.emit('message', {
+        nickname: nickname,
+        text: text
+    });
+
+};
