@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat</title>
 
-    <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
-    <script defer src="app.js"></script>
+<script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
+<script defer src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <ul></ul>
+<div class="chat-container">
 
-    <input id="nickname" placeholder="Nickname">
-    <input id="message" placeholder="Message">
+    <h2>Chat en tiempo real</h2>
 
-    <button>Send</button>
+    <ul id="messages"></ul>
+
+    <div class="inputs">
+        <input id="nickname" placeholder="Nickname">
+        <input id="message" placeholder="Escribe un mensaje">
+        <button>Enviar</button>
+    </div>
+
+</div>
 
 </body>
-
 </html>
